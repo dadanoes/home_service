@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeServe - Jasa Layanan Rumah Terpercaya</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="#">Home<span>Serve</span></a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="active">Beranda</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#contact">Hubungi Kami</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Solusi Terbaik untuk Kebutuhan Rumah Anda</h1>
+          <p>
+            Kami menyediakan berbagai layanan profesional untuk menjaga rumah
+            Anda tetap nyaman dan terawat
+          </p>
+          <div class="hero-buttons">
+            <a href="#booking" class="btn btn-primary">Booking Sekarang</a>
+            <a href="#services" class="btn btn-secondary">Lihat Layanan</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="Home Service"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Layanan Kami</h2>
+          <p>Berbagai layanan profesional untuk kebutuhan rumah Anda</p>
+        </div>
+        <div class="service-cards">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Perbaikan Rumah</h3>
+            <p>Layanan perbaikan untuk berbagai kerusakan di rumah Anda</p>
+            <a href="services/home-repair.html" class="btn-card"
+              >Lihat Detail</a
+            >
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-broom"></i>
+            </div>
+            <h3>Pembersihan</h3>
+            <p>
+              Layanan pembersihan profesional untuk rumah yang bersih dan nyaman
+            </p>
+            <a href="services/cleaning.html" class="btn-card">Lihat Detail</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3>Instalasi Listrik</h3>
+            <p>
+              Layanan instalasi dan perbaikan listrik oleh teknisi berpengalaman
+            </p>
+            <a href="services/electrical.html" class="btn-card">Lihat Detail</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-paint-roller"></i>
+            </div>
+            <h3>Pengecatan</h3>
+            <p>Layanan pengecatan profesional untuk interior dan eksterior</p>
+            <a href="services/painting.html" class="btn-card">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+      <div class="container">
+        <div class="section-header">
+          <h2>Booking Layanan</h2>
+          <p>Pesan layanan kami dengan mudah dan cepat</p>
+        </div>
+        <div class="booking-container">
+          <div class="booking-form">
+            <form id="serviceBookingForm">
+              <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Nomor Telepon</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="service">Pilih Layanan</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Pilih Layanan</option>
+                  <option value="home-repair">Perbaikan Rumah</option>
+                  <option value="cleaning">Pembersihan</option>
+                  <option value="electrical">Instalasi Listrik</option>
+                  <option value="painting">Pengecatan</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date">Tanggal Layanan</label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="form-group">
+                <label for="time">Waktu Layanan</label>
+                <input type="time" id="time" name="time" required />
+              </div>
+              <div class="form-group">
+                <label for="address">Alamat Lengkap</label>
+                <textarea
+                  id="address"
+                  name="address"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="notes">Catatan Tambahan</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Booking Sekarang
+              </button>
+            </form>
+          </div>
+          <div class="booking-info">
+            <h3>Mengapa Memilih Kami?</h3>
+            <ul class="booking-features">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Teknisi Profesional & Berpengalaman</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Garansi Layanan</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Harga Transparan Tanpa Biaya Tersembunyi</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Layanan Cepat & Tepat Waktu</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Dukungan Pelanggan 24/7</span>
+              </li>
+            </ul>
+            <div class="booking-contact">
+              <p>Butuh bantuan untuk booking?</p>
+              <a href="tel:+6281234567890" class="booking-phone">
+                <i class="fas fa-phone-alt"></i> +62 812-3456-7890
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tentang Kami</h2>
+          <p>Kenali lebih dekat dengan HomeServe</p>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="About Us"
+            />
+          </div>
+          <div class="about-text">
+            <h3>Solusi Terpercaya untuk Kebutuhan Rumah Anda</h3>
+            <p>
+              HomeServe adalah penyedia jasa layanan rumah terpercaya yang telah
+              melayani ribuan pelanggan sejak 2015. Kami berkomitmen untuk
+              memberikan layanan berkualitas tinggi dengan harga yang
+              transparan.
+            </p>
+            <p>
+              Tim kami terdiri dari para profesional berpengalaman yang telah
+              melalui proses seleksi ketat dan pelatihan komprehensif untuk
+              memastikan setiap pekerjaan dilakukan dengan standar tertinggi.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <h4>5000+</h4>
+                <p>Pelanggan Puas</p>
+              </div>
+              <div class="stat-item">
+                <h4>200+</h4>
+                <p>Teknisi Profesional</p>
+              </div>
+              <div class="stat-item">
+                <h4>15+</h4>
+                <p>Kota Terlayani</p>
+              </div>
+            </div>
+            <a href="about.html" class="btn btn-secondary"
+              >Pelajari Lebih Lanjut</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Testimoni Pelanggan</h2>
+          <p>Apa kata mereka tentang layanan kami</p>
+        </div>
+        <div class="testimonial-slider">
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Sangat puas dengan layanan perbaikan AC dari HomeServe.
+                Teknisinya datang tepat waktu, profesional, dan menyelesaikan
+                masalah dengan cepat. Harga juga sangat transparan tanpa biaya
+                tambahan."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Budi Santoso"
+                />
+                <div class="author-info">
+                  <h4>Budi Santoso</h4>
+                  <p>Jakarta Selatan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Saya menggunakan jasa pembersihan rumah dari HomeServe secara
+                rutin. Tim mereka selalu teliti, ramah, dan hasil pekerjaannya
+                selalu memuaskan. Rumah jadi bersih dan segar setiap kali mereka
+                selesai."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="Siti Nurhaliza"
+                />
+                <div class="author-info">
+                  <h4>Siti Nurhaliza</h4>
+                  <p>Bandung</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p>
+                "Baru saja menggunakan jasa pengecatan rumah dari HomeServe.
+                Hasilnya sangat memuaskan, tim bekerja dengan rapi dan
+                profesional. Rumah jadi terlihat seperti baru lagi. Terima kasih
+                HomeServe!"
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://randomuser.me/api/portraits/men/67.jpg"
+                  alt="Agus Wijaya"
+                />
+                <div class="author-info">
+                  <h4>Agus Wijaya</h4>
+                  <p>Surabaya</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="testimonial-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Hubungi Kami</h2>
+          <p>Kami siap membantu Anda</p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Alamat</h3>
+                <p>Jl. Merdeka No. 123, Jakarta Pusat, 10110</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Telepon</h3>
+                <p><a href="tel:+6281234567890">+62 812-3456-7890</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Email</h3>
+                <p><a href="mailto:info@homeserve.id">info@homeserve.id</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Jam Operasional</h3>
+                <p>Senin - Jumat: 08.00 - 18.00</p>
+                <p>Sabtu: 09.00 - 15.00</p>
+                <p>Minggu: Tutup</p>
+              </div>
+            </div>
+            <div class="social-media">
+              <h3>Ikuti Kami</h3>
+              <div class="social-icons">
+                <a href="#" class="social-icon"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-icon"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="social-icon"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-icon"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Nama Lengkap</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="contactName"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  name="contactEmail"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactPhone">Nomor Telepon</label>
+                <input type="tel" id="contactPhone" name="contactPhone" />
+              </div>
+              <div class="form-group">
+                <label for="contactSubject">Subjek</label>
+                <input
+                  type="text"
+                  id="contactSubject"
+                  name="contactSubject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Pesan</label>
+                <textarea
+                  id="contactMessage"
+                  name="contactMessage"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Kirim Pesan
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6664672948397!2d106.82496231476884!3d-6.175392395532956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1628147613217!5m2!1sid!2sid"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="#">Home<span>Serve</span></a>
+            <p>Solusi terbaik untuk kebutuhan rumah Anda</p>
+            <div class="footer-social">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Tautan Cepat</h3>
+            <ul>
+              <li><a href="#home">Beranda</a></li>
+              <li><a href="#services">Layanan</a></li>
+              <li><a href="#booking">Booking</a></li>
+              <li><a href="#about">Tentang Kami</a></li>
+              <li><a href="#contact">Hubungi Kami</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Layanan Kami</h3>
+            <ul>
+              <li><a href="services/home-repair.html">Perbaikan Rumah</a></li>
+              <li><a href="services/cleaning.html">Pembersihan</a></li>
+              <li><a href="services/electrical.html">Instalasi Listrik</a></li>
+              <li><a href="services/painting.html">Pengecatan</a></li>
+              <li><a href="services.html">Semua Layanan</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Berlangganan Newsletter</h3>
+            <p>Dapatkan informasi terbaru dan penawaran spesial dari kami</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Alamat Email Anda" required />
+              <button type="submit" class="btn-newsletter">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 HomeServe. All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="privacy-policy.html">Kebijakan Privasi</a>
+            <a href="terms-of-service.html">Syarat & Ketentuan</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

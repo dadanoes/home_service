@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - HomeServe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Home<span>Serve</span></a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="services.html">Layanan</a></li>
+                <li><a href="index.html#booking">Booking</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html" class="active">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Hubungi Kami</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Beranda</a>
+                <span>/</span>
+                <span>Hubungi Kami</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Informasi Kontak</h2>
+                <p>Kami siap membantu Anda dengan segala kebutuhan rumah Anda</p>
+            </div>
+            <div class="contact-info-grid">
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Alamat Kantor</h3>
+                    <p>Jl. Merdeka No. 123, Jakarta Selatan<br>Indonesia, 12345</p>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Telepon</h3>
+                    <p>+62 812 3456 7890<br>+62 21 987 6543</p>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>info@homeserve.id<br>support@homeserve.id</p>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Jam Operasional</h3>
+                    <p>Senin - Jumat: 08:00 - 18:00<br>Sabtu: 09:00 - 15:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-container">
+                <div class="contact-form-content">
+                    <div class="contact-form-header">
+                        <h2>Kirim Pesan</h2>
+                        <p>Isi formulir di bawah ini dan tim kami akan segera menghubungi Anda</p>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Nomor Telepon</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subjek</label>
+                                <input type="text" id="subject" name="subject" placeholder="Masukkan subjek pesan Anda" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tulis pesan Anda di sini" required></textarea>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Saya menyetujui <a href="privacy-policy.html">Kebijakan Privasi</a> dan <a href="terms-of-service.html">Syarat & Ketentuan</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+                <div class="contact-image">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Contact Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lokasi Kami</h2>
+                <p>Kunjungi kantor kami atau hubungi untuk layanan di rumah Anda</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.29279605123!2d106.7588548748856!3d-6.229386695265607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%20Selatan%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1623456789012!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pertanyaan Umum</h2>
+                <p>Jawaban untuk pertanyaan yang sering diajukan</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara memesan layanan HomeServe?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anda dapat memesan layanan kami melalui beberapa cara: mengisi formulir booking di website, menghubungi kami melalui telepon, atau mengirim email. Tim kami akan segera merespons dan mengatur jadwal kunjungan sesuai kebutuhan Anda.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa biaya untuk layanan HomeServe?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Biaya layanan kami bervariasi tergantung pada jenis layanan, kompleksitas pekerjaan, dan area yang perlu ditangani. Kami selalu memberikan estimasi biaya yang transparan sebelum memulai pekerjaan, dan tidak ada biaya tersembunyi.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah HomeServe menyediakan garansi untuk layanannya?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, kami memberikan garansi untuk semua layanan kami. Jika Anda tidak puas dengan hasil pekerjaan kami, kami akan kembali dan memperbaikinya tanpa biaya tambahan dalam periode garansi yang ditentukan.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Area mana saja yang dilayani oleh HomeServe?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Saat ini, kami melayani area Jakarta dan sekitarnya, termasuk Bogor, Depok, Tangerang, dan Bekasi. Untuk area di luar jangkauan tersebut, silakan hubungi kami untuk konfirmasi ketersediaan layanan.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa lama waktu yang dibutuhkan untuk menyelesaikan pekerjaan?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Durasi pekerjaan bervariasi tergantung pada jenis layanan dan kompleksitas pekerjaan. Untuk pekerjaan kecil seperti perbaikan keran, biasanya dapat diselesaikan dalam beberapa jam. Untuk proyek yang lebih besar seperti pengecatan rumah, mungkin membutuhkan beberapa hari. Kami akan memberikan estimasi waktu yang jelas sebelum memulai pekerjaan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap untuk Mengalami Layanan Kami?</h2>
+                <p>Hubungi kami sekarang dan dapatkan solusi terbaik untuk kebutuhan rumah Anda</p>
+                <div class="cta-buttons">
+                    <a href="index.html#booking" class="btn btn-primary">Booking Sekarang</a>
+                    <a href="tel:+6281234567890" class="btn btn-secondary">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">Home<span>Serve</span></a>
+                    <p>Solusi terbaik untuk kebutuhan rumah Anda</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="index.html#booking">Booking</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Layanan Kami</h3>
+                    <ul>
+                        <li><a href="services/home-repair.html">Perbaikan Rumah</a></li>
+                        <li><a href="services/cleaning.html">Pembersihan</a></li>
+                        <li><a href="services/electrical.html">Instalasi Listrik</a></li>
+                        <li><a href="services/painting.html">Pengecatan</a></li>
+                        <li><a href="services.html">Semua Layanan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Berlangganan Newsletter</h3>
+                    <p>Dapatkan informasi terbaru dan penawaran spesial dari kami</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Alamat Email Anda" required>
+                        <button type="submit" class="btn-newsletter"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 HomeServe. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Kebijakan Privasi</a>
+                    <a href="terms-of-service.html">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-question');
+            
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const parent = this.parentElement;
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('.faq-toggle i');
+                    
+                    // Toggle active class
+                    parent.classList.toggle('active');
+                    
+                    // Toggle icon
+                    if (parent.classList.contains('active')) {
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    } else {
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    }
+                    
+                    // Toggle answer visibility
+                    if (parent.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = '0';
+                    }
+                });
+            });
+        });
+        
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.');
+            this.reset();
+        });
+    </script>
+    <style>
+        /* Additional Styles for Contact Page */
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--text-white);
+            padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-xs);
+            font-size: var(--font-size-sm);
+        }
+        
+        .breadcrumb a {
+            color: var(--text-white);
+            opacity: 0.8;
+            transition: opacity var(--transition-fast);
+        }
+        
+        .breadcrumb a:hover {
+            opacity: 1;
+            color: var(--text-white);
+        }
+        
+        .breadcrumb span {
+            color: var(--text-white);
+            opacity: 0.6;
+        }
+        
+        .contact-info-section {
+            padding: var(--spacing-2xl) 0;
+            background-color: var(--bg-white);
+        }
+        
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .contact-info-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+        
+        .contact-info-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact-info-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            font-size: var(--font-size-2xl);
+        }
+        
+        .contact-info-item h3 {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-dark);
+        }
+        
+        .contact-info-item p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .contact-form-section {
+            padding: var(--spacing-2xl) 0;
+            background-color: var(--bg-light);
+        }
+        
+        .contact-form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+        
+        .contact-form-header {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .contact-form-header h2 {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-dark);
+        }
+        
+        .contact-form-header p {
+            color: var(--text-light);
+        }
+        
+        .contact-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: var(--spacing-sm);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            background-color: var(--bg-white);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px var(--primary-light);
+            outline: none;
+        }
+        
+        .contact-form .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+        
+        .contact-form .form-checkbox input {
+            width: auto;
+            margin-top: 5px;
+        }
+        
+        .contact-form .form-checkbox label {
+            margin-bottom: 0;
+            font-weight: normal;
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+        }
+        
+        .contact-form .form-checkbox a {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .contact-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .map-section {
+            padding: var(--spacing-2xl) 0;
+            background-color: var(--bg-white);
+        }
+        
+        .map-container {
+            margin-top: var(--spacing-xl);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .faq-section {
+            padding: var(--spacing-2xl) 0;
+            background-color: var(--bg-light);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: var(--spacing-xl) auto 0;
+        }
+        
+        .faq-item {
+            margin-bottom: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            background-color: var(--bg-white);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .faq-question:hover {
+            background-color: var(--bg-light);
+        }
+        
+        .faq-question h3 {
+            font-size: var(--font-size-md);
+            margin: 0;
+            color: var(--text-dark);
+        }
+        
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color var(--transition-fast), transform var(--transition-fast);
+        }
+        
+        .faq-item.active .faq-toggle {
+            background-color: var(--primary-color);
+            color: var(--text-white);
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 var(--spacing-md);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-normal);
+        }
+        
+        .faq-answer p {
+            padding-bottom: var(--spacing-md);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-form-container {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+            
+            .contact-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-form .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</body>
+</html>

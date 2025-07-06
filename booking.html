@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Layanan - HomeServe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Home<span>Serve</span></a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="services.html">Layanan</a></li>
+                <li><a href="booking.html" class="active">Booking</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Booking Layanan</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Beranda</a>
+                <span>/</span>
+                <span>Booking</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-page">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-form-container">
+                    <div class="booking-form-header">
+                        <h2>Pesan Layanan Kami</h2>
+                        <p>Isi formulir di bawah ini untuk memesan layanan home service sesuai kebutuhan Anda</p>
+                    </div>
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-section">
+                            <h3>1. Pilih Layanan</h3>
+                            <div class="service-selection">
+                                <div class="service-option">
+                                    <input type="radio" id="service1" name="service" value="home-repair" checked>
+                                    <label for="service1">
+                                        <i class="fas fa-tools"></i>
+                                        <span>Perbaikan Rumah</span>
+                                    </label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="radio" id="service2" name="service" value="cleaning">
+                                    <label for="service2">
+                                        <i class="fas fa-broom"></i>
+                                        <span>Pembersihan</span>
+                                    </label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="radio" id="service3" name="service" value="electrical">
+                                    <label for="service3">
+                                        <i class="fas fa-bolt"></i>
+                                        <span>Instalasi Listrik</span>
+                                    </label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="radio" id="service4" name="service" value="painting">
+                                    <label for="service4">
+                                        <i class="fas fa-paint-roller"></i>
+                                        <span>Pengecatan</span>
+                                    </label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="radio" id="service5" name="service" value="landscaping">
+                                    <label for="service5">
+                                        <i class="fas fa-leaf"></i>
+                                        <span>Taman & Lansekap</span>
+                                    </label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="radio" id="service6" name="service" value="renovation">
+                                    <label for="service6">
+                                        <i class="fas fa-hammer"></i>
+                                        <span>Renovasi</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>2. Detail Layanan</h3>
+                            <div class="service-details" id="homeRepairDetails">
+                                <div class="form-group">
+                                    <label for="repairType">Jenis Perbaikan</label>
+                                    <select id="repairType" name="repairType">
+                                        <option value="">Pilih Jenis Perbaikan</option>
+                                        <option value="plumbing">Perbaikan Pipa & Saluran Air</option>
+                                        <option value="doors-windows">Perbaikan Pintu & Jendela</option>
+                                        <option value="walls-ceilings">Perbaikan Dinding & Langit-langit</option>
+                                        <option value="flooring">Perbaikan Lantai</option>
+                                        <option value="roofing">Perbaikan Atap</option>
+                                        <option value="furniture">Perakitan & Perbaikan Furnitur</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="repairDescription">Deskripsi Masalah</label>
+                                    <textarea id="repairDescription" name="repairDescription" rows="4" placeholder="Jelaskan masalah yang perlu diperbaiki secara detail"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="service-details" id="cleaningDetails" style="display: none;">
+                                <div class="form-group">
+                                    <label for="cleaningType">Jenis Pembersihan</label>
+                                    <select id="cleaningType" name="cleaningType">
+                                        <option value="">Pilih Jenis Pembersihan</option>
+                                        <option value="regular">Pembersihan Rumah Reguler</option>
+                                        <option value="deep">Deep Cleaning</option>
+                                        <option value="post-renovation">Pembersihan Pasca Renovasi</option>
+                                        <option value="windows">Pembersihan Jendela</option>
+                                        <option value="carpet-sofa">Pembersihan Karpet & Sofa</option>
+                                        <option value="kitchen">Pembersihan Dapur</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="propertySize">Ukuran Properti</label>
+                                    <select id="propertySize" name="propertySize">
+                                        <option value="">Pilih Ukuran Properti</option>
+                                        <option value="small">Kecil (< 50m²)</option>
+                                        <option value="medium">Sedang (50-100m²)</option>
+                                        <option value="large">Besar (100-150m²)</option>
+                                        <option value="xlarge">Sangat Besar (> 150m²)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cleaningNotes">Catatan Tambahan</label>
+                                    <textarea id="cleaningNotes" name="cleaningNotes" rows="4" placeholder="Berikan informasi tambahan tentang kebutuhan pembersihan Anda"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="service-details" id="electricalDetails" style="display: none;">
+                                <div class="form-group">
+                                    <label for="electricalType">Jenis Pekerjaan Listrik</label>
+                                    <select id="electricalType" name="electricalType">
+                                        <option value="">Pilih Jenis Pekerjaan Listrik</option>
+                                        <option value="installation">Instalasi Baru</option>
+                                        <option value="repair">Perbaikan & Pemeliharaan</option>
+                                        <option value="upgrade">Peningkatan Sistem</option>
+                                        <option value="lighting">Instalasi Pencahayaan</option>
+                                        <option value="security">Instalasi Sistem Keamanan</option>
+                                        <option value="inspection">Inspeksi Listrik</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="electricalDescription">Deskripsi Kebutuhan</label>
+                                    <textarea id="electricalDescription" name="electricalDescription" rows="4" placeholder="Jelaskan kebutuhan listrik Anda secara detail"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="service-details" id="paintingDetails" style="display: none;">
+                                <div class="form-group">
+                                    <label for="paintingType">Jenis Pengecatan</label>
+                                    <select id="paintingType" name="paintingType">
+                                        <option value="">Pilih Jenis Pengecatan</option>
+                                        <option value="interior">Pengecatan Interior</option>
+                                        <option value="exterior">Pengecatan Eksterior</option>
+                                        <option value="decorative">Pengecatan Dekoratif</option>
+                                        <option value="furniture">Pengecatan Furnitur</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="wallArea">Perkiraan Luas Area (m²)</label>
+                                    <input type="number" id="wallArea" name="wallArea" placeholder="Masukkan perkiraan luas area yang akan dicat">
+                                </div>
+                                <div class="form-group">
+                                    <label for="paintingNotes">Catatan Tambahan</label>
+                                    <textarea id="paintingNotes" name="paintingNotes" rows="4" placeholder="Berikan informasi tambahan tentang kebutuhan pengecatan Anda, termasuk preferensi warna"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="service-details" id="landscapingDetails" style="display: none;">
+                                <div class="form-group">
+                                    <label for="landscapingType">Jenis Layanan Taman</label>
+                                    <select id="landscapingType" name="landscapingType">
+                                        <option value="">Pilih Jenis Layanan Taman</option>
+                                        <option value="design">Desain Taman</option>
+                                        <option value="maintenance">Pemeliharaan Taman</option>
+                                        <option value="planting">Penanaman & Penggantian Tanaman</option>
+                                        <option value="irrigation">Sistem Irigasi</option>
+                                        <option value="hardscape">Konstruksi Hardscape</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gardenSize">Ukuran Taman (m²)</label>
+                                    <input type="number" id="gardenSize" name="gardenSize" placeholder="Masukkan ukuran taman Anda">
+                                </div>
+                                <div class="form-group">
+                                    <label for="landscapingNotes">Deskripsi Kebutuhan</label>
+                                    <textarea id="landscapingNotes" name="landscapingNotes" rows="4" placeholder="Jelaskan kebutuhan taman Anda secara detail"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="service-details" id="renovationDetails" style="display: none;">
+                                <div class="form-group">
+                                    <label for="renovationType">Jenis Renovasi</label>
+                                    <select id="renovationType" name="renovationType">
+                                        <option value="">Pilih Jenis Renovasi</option>
+                                        <option value="kitchen">Renovasi Dapur</option>
+                                        <option value="bathroom">Renovasi Kamar Mandi</option>
+                                        <option value="room">Renovasi Ruangan</option>
+                                        <option value="extension">Perluasan Bangunan</option>
+                                        <option value="full-house">Renovasi Rumah Keseluruhan</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="renovationScope">Cakupan Pekerjaan</label>
+                                    <textarea id="renovationScope" name="renovationScope" rows="4" placeholder="Jelaskan cakupan pekerjaan renovasi yang Anda inginkan"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="renovationBudget">Perkiraan Budget (Rp)</label>
+                                    <input type="number" id="renovationBudget" name="renovationBudget" placeholder="Masukkan perkiraan budget Anda">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>3. Jadwal Layanan</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="serviceDate">Tanggal Layanan</label>
+                                    <input type="date" id="serviceDate" name="serviceDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="serviceTime">Waktu Layanan</label>
+                                    <select id="serviceTime" name="serviceTime" required>
+                                        <option value="">Pilih Waktu</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                        <option value="15:00">15:00 - 17:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="flexibility">Fleksibilitas Jadwal</label>
+                                <select id="flexibility" name="flexibility">
+                                    <option value="strict">Hanya pada tanggal dan waktu yang dipilih</option>
+                                    <option value="same-day">Fleksibel pada tanggal yang sama</option>
+                                    <option value="same-week">Fleksibel dalam minggu yang sama</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>4. Informasi Kontak</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nama Lengkap</label>
+                                    <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Nomor Telepon</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactMethod">Metode Kontak Pilihan</label>
+                                    <select id="contactMethod" name="contactMethod">
+                                        <option value="phone">Telepon</option>
+                                        <option value="whatsapp">WhatsApp</option>
+                                        <option value="email">Email</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>5. Alamat Layanan</h3>
+                            <div class="form-group">
+                                <label for="address">Alamat Lengkap</label>
+                                <textarea id="address" name="address" rows="3" placeholder="Masukkan alamat lengkap tempat layanan akan dilakukan" required></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">Kota</label>
+                                    <input type="text" id="city" name="city" placeholder="Masukkan kota" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postalCode">Kode Pos</label>
+                                    <input type="text" id="postalCode" name="postalCode" placeholder="Masukkan kode pos">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="locationNotes">Catatan Lokasi</label>
+                                <textarea id="locationNotes" name="locationNotes" rows="2" placeholder="Berikan petunjuk tambahan untuk menemukan lokasi Anda (opsional)"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>6. Catatan Tambahan</h3>
+                            <div class="form-group">
+                                <label for="additionalNotes">Catatan Tambahan</label>
+                                <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Berikan informasi tambahan yang mungkin berguna untuk teknisi kami"></textarea>
+                            </div>
+                            <div class="form-group form-checkbox">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">Saya menyetujui <a href="terms-of-service.html">Syarat & Ketentuan</a> dan <a href="privacy-policy.html">Kebijakan Privasi</a></label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Kirim Booking</button>
+                            <button type="reset" class="btn btn-secondary">Reset Form</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="booking-sidebar">
+                    <div class="booking-summary">
+                        <h3>Ringkasan Booking</h3>
+                        <div id="bookingSummary">
+                            <p>Silakan pilih layanan dan isi detail untuk melihat ringkasan booking Anda.</p>
+                        </div>
+                    </div>
+                    <div class="booking-info">
+                        <h3>Informasi Booking</h3>
+                        <div class="info-item">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Setelah Anda mengirimkan formulir booking, tim kami akan menghubungi Anda dalam waktu 24 jam untuk mengonfirmasi jadwal dan memberikan estimasi biaya.</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Anda dapat membatalkan atau menjadwalkan ulang booking hingga 24 jam sebelum waktu layanan tanpa dikenakan biaya.</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-credit-card"></i>
+                            <p>Pembayaran dapat dilakukan setelah layanan selesai atau melalui deposit di muka untuk layanan tertentu.</p>
+                        </div>
+                    </div>
+                    <div class="need-help">
+                        <h3>Butuh Bantuan?</h3>
+                        <p>Hubungi tim layanan pelanggan kami untuk bantuan dalam proses booking.</p>
+                        <a href="tel:+6281234567890" class="btn btn-outline"><i class="fas fa-phone"></i> +62 812 3456 7890</a>
+                        <a href="mailto:booking@homeserve.id" class="btn btn-outline"><i class="fas fa-envelope"></i> booking@homeserve.id</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">Home<span>Serve</span></a>
+                    <p>Solusi terbaik untuk kebutuhan rumah Anda</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Layanan Kami</h3>
+                    <ul>
+                        <li><a href="services/home-repair.html">Perbaikan Rumah</a></li>
+                        <li><a href="services/cleaning.html">Pembersihan</a></li>
+                        <li><a href="services/electrical.html">Instalasi Listrik</a></li>
+                        <li><a href="services/painting.html">Pengecatan</a></li>
+                        <li><a href="services.html">Semua Layanan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Berlangganan Newsletter</h3>
+                    <p>Dapatkan informasi terbaru dan penawaran spesial dari kami</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Alamat Email Anda" required>
+                        <button type="submit" class="btn-newsletter"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 HomeServe. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Kebijakan Privasi</a>
+                    <a href="terms-of-service.html">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Service selection toggle
+            const serviceRadios = document.querySelectorAll('input[name="service"]');
+            const serviceDetails = document.querySelectorAll('.service-details');
+            
+            serviceRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    // Hide all service details
+                    serviceDetails.forEach(detail => {
+                        detail.style.display = 'none';
+                    });
+                    
+                    // Show selected service details
+                    let selectedValue = this.value;
+                    let detailsId;
+                    
+                    switch(selectedValue) {
+                        case 'home-repair':
+                            detailsId = 'homeRepairDetails';
+                            break;
+                        case 'cleaning':
+                            detailsId = 'cleaningDetails';
+                            break;
+                        case 'electrical':
+                            detailsId = 'electricalDetails';
+                            break;
+                        case 'painting':
+                            detailsId = 'paintingDetails';
+                            break;
+                        case 'landscaping':
+                            detailsId = 'landscapingDetails';
+                            break;
+                        case 'renovation':
+                            detailsId = 'renovationDetails';
+                            break;
+                    }
+                    
+                    if (detailsId) {
+                        document.getElementById(detailsId).style.display = 'block';
+                    }
+                    
+                    updateBookingSummary();
+                });
+            });
+            
+            // Form fields change event for summary update
+            const formFields = document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea');
+            formFields.forEach(field => {
+                field.addEventListener('change', updateBookingSummary);
+            });
+            
+            // Initial summary update
+            updateBookingSummary();
+            
+            // Form submission
+            document.getElementById('bookingForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the form data to your server
+                alert('Terima kasih! Booking Anda telah diterima. Tim kami akan menghubungi Anda dalam waktu 24 jam untuk konfirmasi.');
+                // Optionally reset the form
+                // this.reset();
+                // updateBookingSummary();
+            });
+            
+            // Function to update booking summary
+            function updateBookingSummary() {
+                const summaryElement = document.getElementById('bookingSummary');
+                let summaryHTML = '';
+                
+                // Get selected service
+                const selectedService = document.querySelector('input[name="service"]:checked');
+                if (selectedService) {
+                    const serviceLabel = selectedService.nextElementSibling.querySelector('span').textContent;
+                    summaryHTML += `<div class="summary-item"><strong>Layanan:</strong> ${serviceLabel}</div>`;
+                    
+                    // Get service details based on selected service
+                    const serviceValue = selectedService.value;
+                    let detailsField, detailsValue, detailsLabel;
+                    
+                    switch(serviceValue) {
+                        case 'home-repair':
+                            detailsField = document.getElementById('repairType');
+                            if (detailsField.value) {
+                                detailsLabel = detailsField.options[detailsField.selectedIndex].text;
+                                summaryHTML += `<div class="summary-item"><strong>Jenis Perbaikan:</strong> ${detailsLabel}</div>`;
+                            }
+                            break;
+                        case 'cleaning':
+                            detailsField = document.getElementById('cleaningType');
+                            if (detailsField.value) {
+                                detailsLabel = detailsField.options[detailsField.selectedIndex].text;
+                                summaryHTML += `<div class="summary-item"><strong>Jenis Pembersihan:</strong> ${detailsLabel}</div>`;
+                            }
+                            
+                            const propertySizeField = document.getElementById('propertySize');
+                            if (propertySizeField.value) {
+                                const propertySizeLabel = propertySizeField.options[propertySizeField.selectedIndex].text;
+                                summaryHTML += `<div class="summary-item"><strong>Ukuran Properti:</strong> ${propertySizeLabel}</div>`;
+                            }
+                            break;
+                        case 'electrical':
+                            detailsField = document.getElementById('electricalType');
+                            if (detailsField.value) {
+                                detailsLabel = detailsField.options[detailsField.selectedIndex].text;
+                                summaryHTML += `<div class="summary-item"><strong>Jenis Pekerjaan Listrik:</strong> ${detailsLabel}</div>`;
+                            }
+                            break;
+                        case 'painting':
+                            detailsField = document.getElementById('paintingType');
+                            if (detailsField.value) {
+                                detailsLabel = detailsField.options[detailsField.selectedIndex].text;
+                                summaryHTML += `<div class="summary-item"><strong>Jenis Pengecatan:</strong> ${detailsLabel}</div>`;
+                            }
+                            
+                            const wallAreaField = document.getElementById('wallArea');
+                            if (wallAreaField.value) {
+                                summaryHTML += `<div class="summary-item"><strong>Luas Area:</strong> ${wallAreaField.value} m²</div>`;
+                            }
+                            break;
+                        case 'landscaping':
+                            detailsField = document.getElementById('landscapingType');
+                            if (detailsField.value) {
+                                detailsLabel = detailsField.options[detailsField.selectedIndex].text;
+                                summaryHTML += `<div class="summary-item"><strong>Jenis Layanan Taman:</strong> ${detailsLabel}</div>`;
+                            }
+                            
+                            const gardenSizeField = document.getElementById('gardenSize');
+                            if (gardenSizeField.value) {
+                                summaryHTML += `<div class="summary-item"><strong>Ukuran Taman:</strong> ${gardenSizeField.value} m²</div>`;
+                            }
+                            break;
+                        case 'renovation':
+                            detailsField = document.getElementById('renovationType');
+                            if (detailsField.value) {
+                                detailsLabel = detailsField.options[detailsField.selectedIndex].text;
+                                summaryHTML += `<div class="summary-item"><strong>Jenis Renovasi:</strong> ${detailsLabel}</div>`;
+                            }
+                            
+                            const budgetField = document.getElementById('renovationBudget');
+                            if (budgetField.value) {
+                                summaryHTML += `<div class="summary-item"><strong>Budget:</strong> Rp ${parseInt(budgetField.value).toLocaleString()}</div>`;
+                            }
+                            break;
+                    }
+                }
+                
+                // Get schedule information
+                const dateField = document.getElementById('serviceDate');
+                const timeField = document.getElementById('serviceTime');
+                
+                if (dateField.value) {
+                    const formattedDate = new Date(dateField.value).toLocaleDateString('id-ID', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                    summaryHTML += `<div class="summary-item"><strong>Tanggal:</strong> ${formattedDate}</div>`;
+                }
+                
+                if (timeField.value) {
+                    summaryHTML += `<div class="summary-item"><strong>Waktu:</strong> ${timeField.value}</div>`;
+                }
+                
+                // Get contact information
+                const nameField = document.getElementById('name');
+                if (nameField.value) {
+                    summaryHTML += `<div class="summary-item"><strong>Nama:</strong> ${nameField.value}</div>`;
+                }
+                
+                // Get address information
+                const addressField = document.getElementById('address');
+                const cityField = document.getElementById('city');
+                
+                if (addressField.value && cityField.value) {
+                    summaryHTML += `<div class="summary-item"><strong>Lokasi:</strong> ${addressField.value}, ${cityField.value}</div>`;
+                }
+                
+                // If no information is available yet
+                if (!summaryHTML) {
+                    summaryHTML = '<p>Silakan pilih layanan dan isi detail untuk melihat ringkasan booking Anda.</p>';
+                } else {
+                    // Add estimated price range (this would be dynamic in a real application)
+                    summaryHTML += `<div class="price-estimate"><span>Estimasi Harga:</span> <strong>Rp 250.000 - Rp 1.500.000</strong><br><small>*Harga final akan dikonfirmasi setelah assessment</small></div>`;
+                }
+                
+                summaryElement.innerHTML = summaryHTML;
+            }
+        });
+    </script>
+    <style>
+        /* Additional Styles for Booking Page */
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--text-white);
+            padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-xs);
+            font-size: var(--font-size-sm);
+        }
+        
+        .breadcrumb a {
+            color: var(--text-white);
+            opacity: 0.8;
+            transition: opacity var(--transition-fast);
+        }
+        
+        .breadcrumb a:hover {
+            opacity: 1;
+            color: var(--text-white);
+        }
+        
+        .breadcrumb span {
+            color: var(--text-white);
+            opacity: 0.6;
+        }
+        
+        .booking-page {
+            padding: var(--spacing-2xl) 0;
+            background-color: var(--bg-light);
+        }
+        
+        .booking-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+        }
+        
+        .booking-form-container {
+            background-color: var(--bg-white);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            padding: var(--spacing-xl);
+        }
+        
+        .booking-form-header {
+            margin-bottom: var(--spacing-lg);
+            text-align: center;
+        }
+        
+        .booking-form-header h2 {
+            font-size: var(--font-size-2xl);
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .booking-form-header p {
+            color: var(--text-light);
+        }
+        
+        .form-section {
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .form-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .form-section h3 {
+            font-size: var(--font-size-lg);
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .service-option {
+            position: relative;
+        }
+        
+        .service-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .service-option label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-md);
+            background-color: var(--bg-light);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+        
+        .service-option input[type="radio"]:checked + label {
+            border-color: var(--primary-color);
+            background-color: var(--primary-light);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .service-option label i {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-color);
+        }
+        
+        .service-option label span {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .service-details {
+            margin-top: var(--spacing-md);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--spacing-sm);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            background-color: var(--bg-white);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px var(--primary-light);
+            outline: none;
+        }
+        
+        .form-group.form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+        
+        .form-group.form-checkbox input {
+            width: auto;
+            margin-top: 5px;
+        }
+        
+        .form-group.form-checkbox label {
+            margin-bottom: 0;
+            font-weight: normal;
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+        }
+        
+        .form-group.form-checkbox a {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .booking-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+        }
+        
+        .booking-summary,
+        .booking-info,
+        .need-help {
+            background-color: var(--bg-white);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            padding: var(--spacing-lg);
+        }
+        
+        .booking-summary h3,
+        .booking-info h3,
+        .need-help h3 {
+            font-size: var(--font-size-lg);
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .summary-item {
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-light);
+        }
+        
+        .summary-item strong {
+            color: var(--text-dark);
+        }
+        
+        .price-estimate {
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px dashed var(--border-color);
+        }
+        
+        .price-estimate span {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        .price-estimate strong {
+            color: var(--primary-color);
+            font-size: var(--font-size-lg);
+        }
+        
+        .price-estimate small {
+            display: block;
+            margin-top: var(--spacing-xs);
+            color: var(--text-light);
+            font-size: var(--font-size-xs);
+        }
+        
+        .info-item {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .info-item i {
+            color: var(--primary-color);
+            font-size: var(--font-size-lg);
+            margin-top: 3px;
+        }
+        
+        .info-item p {
+            color: var(--text-light);
+            font-size: var(--font-size-sm);
+            margin: 0;
+        }
+        
+        .need-help p {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .need-help .btn {
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .btn-outline {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            border-radius: var(--border-radius-sm);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+        }
+        
+        @media (max-width: 992px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-selection {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .service-selection {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</body>
+</html>
